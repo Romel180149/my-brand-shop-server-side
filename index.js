@@ -87,17 +87,17 @@ async function run() {
         })
     
         // cart collection
-        app.get('/cart', async (req, res) => {
-            const cursor= cartCollections.find();
+        // app.get('/cart', async (req, res) => {
+        //     const cursor= cartCollections.find();
     
-            const result= await cursor.toArray();
-            res.send(result);
-          })
-        app.post('/cart',async(req, res)=>{
-            const product= req.body;
-            const result= await cartCollections.insertOne(product);
-            res.send(result);
-          })
+        //     const result= await cursor.toArray();
+        //     res.send(result);
+        //   })
+        // app.post('/cart',async(req, res)=>{
+        //     const product= req.body;
+        //     const result= await cartCollections.insertOne(product);
+        //     res.send(result);
+        //   })
           app.delete('/cart/:id',async(req, res)=>{
             const id= req.params.id;
             const query= {_id: new ObjectId(id)}
