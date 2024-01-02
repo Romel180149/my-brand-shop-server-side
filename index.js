@@ -112,9 +112,9 @@ async function run() {
 // run().catch(console.dir);
 run().catch(console.dir);
 app.get('/', (req, res) => {
-    res.send('Coffee making server is running')
+    res.send('brand shop server is running')
 })
 
 app.listen(port, () => {
-    console.log(`Coffee Server is running on port: ${port}`)
+    console.log(`brand shop is running on port: ${port}`)
 })
