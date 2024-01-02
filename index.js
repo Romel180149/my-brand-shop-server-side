@@ -42,14 +42,14 @@ async function run() {
             // console.log(result);
             res.send(result);
         })
-        // app.get('/products/:brand',async(req,res)=>{
-        //     const brand= req.params.brand;
-        //     // console.log(brand);
-        //     const query= {brand: brand}
-        //     const cursor=  productCollections.find(query);
-        //     const result= await cursor.toArray();
-        //     res.send(result);
-        // })
+        app.get('/products/:brand',async(req,res)=>{
+            const brand= req.params.brand;
+            // console.log(brand);
+            const query= {brand: brand}
+            const cursor=  productCollections.find(query);
+            const result= await cursor.toArray();
+            res.send(result);
+        })
         app.get('/products/:brand/:id', async(req,res)=>{
             const id = req.params.id;
             // const query= {brand: brand}
